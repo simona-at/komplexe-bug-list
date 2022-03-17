@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bug-List (Simona Ascher)</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+    <h1>Bug-List</h1>
+    <!-- Formular zur Eingabe von neuen Bugs: -->
+    <form name="bugList">
+        <div id="bugEntry" class="row">
+            <div class="col">
+                <div class="row">
+                    <div id="title">
+                        <label for="titleInput">Title:</label>
+                        <input type="text" name="title" id="titleInput">
+                    </div>
+                    <label for="editorInput" class="floatRight">Editor(s):</label>
+                </div>
+                <div id="description" class="row">
+                    <label for="descriptionInput">Description:</label>
+                    <textarea name="description" rows="6" cols="36" id="descriptionInput"></textarea>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col" id="editor">
+                    <select name="editor" id="editorInput" multiple size="6">
+                    </select>
+                </div>
+
+                <div class="floatRight">
+                    <input id="add" type="button" value="Add"/>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="buttons" class="row">
+            <div class="floatLeft">
+                <input id="showAll" type="button" value="Show all" />
+                <input id="showOpen" type="button" value="Show open" />
+            </div>
+        </div>
+    </form>
+
+    <!-- Liste zur Anzeige bereits bestehender Bugs: -->
+    <div id="listOfBugs"></div>
+
+</div>
+    <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="script/objects.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+
+</body>
+</html>
